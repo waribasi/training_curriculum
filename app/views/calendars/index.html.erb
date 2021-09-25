@@ -7,21 +7,23 @@
     <%= f.submit '保存' %>
   <% end %>
 </div>
-<div>
+
+
   <div class='calendar'>
     <% @week_days.each do |day| %>
+    
       <div class='item'>
+      </div>
         <div class='date'>
           <% day[:month] %>/<% day[:date] %>
         </div>
+
         <ul class='content'>
-        <% if day[:plans].length != 0 %>
-          <% day[:plans].each do |plan| %>
-            <li class='plan-list'>・<%= plan %></li>
-          <% end %>
-        <% end %>
+               <% if day[:plans].length != 0 %><% end %>
+               <% day[:plans].each do |plan| %><% end %>
+               <li class='plan-list'>・<%= plan %></li>
         </ul>
-      </div>
+
     <% end %>
+
   </div>
-</div>
