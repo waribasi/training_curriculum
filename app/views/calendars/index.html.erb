@@ -12,16 +12,13 @@
   <div class='calendar'>
     <% @week_days.each do |day| %>
     
-      <div class='item'>
-      </div>
-        <div class='date'>
-          <% day[:month] %>/<% day[:date] %>
-        </div>
+      <div class='item'></div>
+      <% day[:month] %>/<% day[:date] %>
 
         <ul class='content'>
-               <% if day[:plans].length != 0 %><% end %>
-               <% day[:plans].each do |plan| %><% end %>
-               <li class='plan-list'>・<%= plan %></li>
+            <% if day[:plans].length != 0 %><% end %>
+            <% day[:plans].each do |plan| %><% end %>
+            <li class='plan-list'>・<%= plan %></li>
         </ul>
 
     <% end %>
